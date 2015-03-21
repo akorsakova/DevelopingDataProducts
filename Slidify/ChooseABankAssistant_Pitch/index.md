@@ -19,9 +19,9 @@ Author: Anna Korsakova Bain
 --- .class #id 
 
 ## What is the 'Choose a Bank Assistant'?
-> * The 'Choose a Bank Assistant' allows the user to compare complaints filed to the Consumer Financial Protection Bureau (CFPB) 
+> * The 'Choose a Bank Assistant' allows users to compare banks by complaints filed to the Consumer Financial Protection Bureau (CFPB) 
 <br><br>
-> * Complaints can be filed with the CFPB for any bank by any consumer. 
+> * The public can file complaints with the CFPB for any bank in the United States
 <br><br>
 > * The 'Choose a Bank Assistant' shows graphical comparisons for all banking related complaints for 2014
 
@@ -37,9 +37,9 @@ Author: Anna Korsakova Bain
 --- .class #id 
 
 ## How do you choose a bank?
-> * Research shows that most people choose a bank by location convenience, either to the branch or the ATM
+> * Research shows that most people choose a bank based on location convenience, either to the branch or the ATM
 <br><br>
-> * Not many people take the time to look the how many or what kinds of issues consumers report about their bank. Below is the average monthly number of bank related complaints filed with the CFPB in 2014:
+> * Not many people take the time to look at how many consumers report issues about their bank. Below is the average monthly number of bank related complaints filed with the CFPB in 2014:
 <br><br>
 
 
@@ -56,7 +56,7 @@ Author: Anna Korsakova Bain
 --- .class #id 
 
 ## How will this help me chose a bank?
-> * With anywhere between 1,100 and 1,300 complaints filed with the CFPB relating to banks, shouldn't we all be doing a little bit more research than the nearest ATM location?
+> * With anywhere between 1,100 and 1,300 complaints a month filed with the CFPB relating to banks, shouldn't we all be doing a little bit more research than the nearest ATM location?
 
 
 ```r

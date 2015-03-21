@@ -18,6 +18,24 @@ shinyServer(function(input, output) {
     selectInput("bank", "Choose a Bank", as.list(sort(unique(cfpb$Company))))
   })
   
+  #print selection at the top and monthly average
+  output$selectedBank <- renderText({
+    input$goButton
+    isolate({
+      if (input$goButton == 0) {  
+        paste("Showing 10 banks with the highest number of complaints for 2014") 
+      }
+      else {
+        topBank1 <- cfpb[,(names(cfpb) %in% c("Company", "monthYr"))]
+        topBank1 <- data.frame(subset(topBank1, Company %in% input$bank))        
+        #get frequency counts
+        totals1 <- ddply(topBank1, .(Company, monthYr), summarise, freq=length(Company))
+        
+        paste("You have selected ",input$bank, ", average number of complaints monthly: ", round(mean(totals1$freq),0))
+      }
+    })
+  })
+  
   #create first graph
   output$freqPlot <- renderPlot({
     #get frequency counts

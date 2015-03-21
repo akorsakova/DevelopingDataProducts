@@ -44,6 +44,8 @@ shinyUI(fluidPage(
       ),
     
     mainPanel(
+      #output selected bank and the monthly average
+      textOutput("selectedBank"),
       #output frequency barplot
       plotOutput("freqPlot",width="750px",height="300px"), 
       br(),
