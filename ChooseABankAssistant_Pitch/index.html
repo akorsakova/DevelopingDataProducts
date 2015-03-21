@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Choose A Bank Assistant</title>
+  <meta name="description" content="">
+  <meta name="author" content="Anna Korsakova Bain">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/RevealJS/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/RevealJS/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/default.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h2>Choose a Bank Assistant</h2>
+  <p>Application Pitch</p>
+
+<p>Author: Anna Korsakova Bain</p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>What is the &#39;Choose a Bank Assistant&#39;?</h2>
+  <ul class = "build incremental">
+<li>The &#39;Choose a Bank Assistant&#39; allows the user to compare complaints filed to the Consumer Financial Protection Bureau (CFPB) 
+<br><br></li>
+<li>Complaints can be filed with the CFPB for any bank by any consumer. 
+<br><br></li>
+<li>The &#39;Choose a Bank Assistant&#39; shows graphical comparisons for all banking related complaints for 2014</li>
+</ul>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>What is the CFPB?</h2>
+  <ul class = "build incremental">
+<li>The CFPB is an independent agency of the United States government responsible for consumer protection in the financial sector
+<br><br></li>
+<li> The CFPB writes and enforces rules for financial institutions, examines both bank and non-bank financial institutions, monitors and reports on markets, as well as collects and tracks consumer complaints
+<br><br></li>
+<li>Additional information on the CFPB can be found on <a href = "http://en.wikipedia.org/wiki/Consumer_Financial_Protection_Bureau"> <font color="FF00CC">Wikipedia</font></a></li>
+</ul>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>How do you choose a bank?</h2>
+  <ul class = "build incremental">
+<li>Research shows that most people choose a bank by location convenience, either to the branch or the ATM
+<br><br></li>
+<li>Not many people take the time to look the how many or what kinds of issues consumers report about their bank. Below is the average monthly number of bank related complaints filed with the CFPB in 2014:
+<br><br></li>
+</ul>
+
+<pre><code class="r">  #Average Number of Complaints for a Given Month in 2014
+  round(mean(complaints$totals),0)
+</code></pre>
+
+<pre><code>## [1] 1223
+</code></pre>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>How will this help me chose a bank?</h2>
+  <ul class = "build incremental">
+<li>With anywhere between 1,100 and 1,300 complaints filed with the CFPB relating to banks, shouldn&#39;t we all be doing a little bit more research than the nearest ATM location?</li>
+</ul>
+
+<pre><code class="r">  plot(complaints$months,complaints$totals,type=&quot;o&quot;,pch=22, lty=2,col=&quot;blue&quot;,main=&quot;CFPB Bank Complaints for 2014&quot;, xlab=&quot;Month&quot;, ylab=&quot;Total Number of Complaints&quot;)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"> </p>
+
+<p>See how your banks stacks up <a href = "https://akorsakovabain.shinyapps.io/ChooseABankAssistant/"> <font color="FF00CC">here                                    </font></a></p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/RevealJS/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/RevealJS/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/RevealJS/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/RevealJS/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/RevealJS/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/RevealJS/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
