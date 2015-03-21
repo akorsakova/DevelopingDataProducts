@@ -41,8 +41,6 @@ shinyUI(fluidPage(
       p("If you don't select a bank, the Download button will export all 2014 CFPB data.
               Once you have selected a bank and click Submit, the Download button will export all 2014 CFPB data 
               for your selected bank.")
-      
-
       ),
     
     mainPanel(
